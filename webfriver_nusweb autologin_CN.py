@@ -24,7 +24,7 @@ class Login:
             password_input.send_keys(Keys.ENTER)
             
         except:
-            print(self.getCurrentTime(), u"登陆函数异常")
+            print(self.getCurrentTime(), u"登录函数异常")
             
         finally:
             time.sleep(3)
@@ -53,7 +53,7 @@ class Login:
 
     #主函数
     def main(self):
-        print (self.getCurrentTime(), u"Hi，NUS自动登陆脚本正在运行")
+        print (self.getCurrentTime(), u"Hi，NUS自动登录脚本正在运行")
         while True:
             while True:
                 can_connect = self.canConnect()
@@ -66,9 +66,9 @@ class Login:
                     finally:
                         time.sleep(2)
                         if self.canConnect():
-                            print(self.getCurrentTime(), u"重新登陆成功")
+                            print(self.getCurrentTime(), u"重新登录成功")
                         else:
-                            print(self.getCurrentTime(), u"登陆失败，再来一次")
+                            print(self.getCurrentTime(), u"登录失败，再来一次")
                 else:
                     print (self.getCurrentTime(), u"一切正常...")
                     time.sleep(5)
